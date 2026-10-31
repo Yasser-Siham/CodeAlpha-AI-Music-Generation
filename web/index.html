@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CodeAlpha · Music Studio</title><link rel="stylesheet" href="/web/style.css"></head>
+<body>
+<header><a class="brand" href="/"> <span class="logo">♫</span><span>CodeAlpha <small>MUSIC STUDIO</small></span></a><span class="local"><i></i> LOCAL WORKSPACE</span></header>
+<main>
+<section class="intro"><div><span class="eyebrow">FROM PATTERNS TO POSSIBILITIES</span><h1>Your next melody starts here.</h1><p>Train your sound. Explore new ideas. Create with AI.</p></div><div class="badge">LSTM <span>Neural engine</span></div></section>
+<div class="workspace">
+<section class="card controls"><div class="section-title"><span class="number">01</span><h2>Shape your sound</h2></div><p class="muted">A few controls. Endless combinations.</p>
+<label for="length">Composition length <span>notes</span></label><input id="length" type="number" min="1" max="5000" value="200">
+<div class="label-row"><label for="temperature">Creativity</label><output id="temp-value">0.9</output></div><input id="temperature" type="range" min="0.1" max="2" step="0.1" value="0.9"><div class="range-labels"><span>Focused</span><span>Experimental</span></div>
+<div class="hint"><span>✧</span><p>Let the model surprise you.<br><small>Higher creativity explores less predictable notes.</small></p></div>
+<button class="primary" data-action="generate"><span>♫</span> Generate composition <span>↗</span></button><p class="footnote">Train a model first to unlock your next composition.</p>
+</section>
+<section class="card stage"><div class="section-title"><span class="number">02</span><h2>The listening room</h2><span class="pill" id="status">Ready</span></div><div class="art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="disc"><span>♫</span></div><div class="wave" aria-hidden="true"></div></div><div class="stage-caption"><span class="eyebrow">MADE BY YOUR MODEL</span><h2>A little inspiration, composed.</h2><p id="result-text">Your next original MIDI will appear here.</p><a id="download" class="download" href="/output/generated_music.mid" download hidden>↓ Download MIDI</a><small>MIDI output · Open in your favourite music software</small></div></section>
+<section class="card setup"><div class="section-title"><span class="number">03</span><h2>Your workspace</h2></div><div class="stats"><div><strong id="file-count">—</strong><span>MIDI files</span></div><div><strong id="model-state">—</strong><span>Model status</span></div></div><div class="setup-row"><div><h3>Start with a demo</h3><p>Create a small synthetic dataset.</p></div><button class="icon-button" data-action="demo" aria-label="Prepare demo data" title="Prepare demo data">＋</button></div><div class="training"><label for="epochs">Training epochs</label><div class="train-row"><input id="epochs" type="number" min="1" max="1000" value="50"><button class="secondary" data-action="train">↗ Train model</button></div><p>Own MIDI files? Add them to <code>data/midi/</code>.</p></div><div class="log-title"><h3>Activity</h3><span id="activity-label">LIVE LOG</span></div><pre id="log" tabindex="0" aria-label="Task activity log">Connecting…</pre><p id="error" role="alert"></p></section>
+</div><footer><span>CODEALPHA / AI MUSIC GENERATION</span><span>A space for musical exploration.</span></footer>
+</main><script src="/web/app.js"></script></body></html>
